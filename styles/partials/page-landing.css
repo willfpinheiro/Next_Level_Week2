@@ -1,0 +1,133 @@
+#page-landing{
+background: var(--color-primary);
+}
+#page-landing #container{
+color: var(--color-text-in-primary);
+}
+
+.logo-container img {
+    height: 10rem;
+}
+.logo-container{
+    text-align: center;
+    margin-bottom: 3.2rem;
+}
+.logo-container h2{
+    /* Grossura da letra */
+    font-weight: 500;
+    font-size: 3.2rem;
+    /* Altura da linha */
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+.hero-image {
+    /* Sempre que colocar porcentagem, verificar quem é o pai, nesse caso é o caontainer que esta na div */
+    width: 100%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
+}
+
+.buttons-container a{
+    width: 30rem;
+    height: 10.4rem;
+    /* erredondar as bordas */
+    border-radius: 0.8rem;
+    margin-right: 1.6rem;
+
+    font: 700 2.4rem Archivo;
+
+    display: flex;
+    /* alinha na vertical */
+    align-items: center;
+    /* alinha na horizontal */
+    justify-content: center;
+
+    text-decoration: none;
+/* transição de mudanças */
+    transition: background 0.2s;
+
+    color: var(--color-button-text);
+}
+
+.buttons-container a img{
+    width: 4rem;
+    margin-right: 2.4rem;
+}
+
+.buttons-container a.study{
+    background: var(--color-primary-lighter);
+}
+.buttons-container a.study:hover{
+    background: var(--color-primary-light);
+}
+
+.buttons-container a.give-classes{
+    background: var(--color-secondary);
+    /* colocou zero para centralizar, pois nao precisa de margem a direita aqui */
+    margin-right: 0;
+}
+.buttons-container a.give-classes:hover{
+    background: var(--color-secondary-dark);
+}
+
+.total-connections{
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total-connections img{
+    margin-left: 0.8rem;
+}
+@media (max-width: 699px) {
+    :root {
+        /* Todo o 1rem vai ser relativo a 10px */
+        font-size: 64%;
+    }
+}
+
+@media (min-width: 1100px){
+    #page-landing #container {
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+        "proffy image image"
+        "button button texting";
+        column-gap: 87%;
+        row-gap: 86%;
+    }
+    .logo-container{
+        grid-area: proffy;
+        text-align: initial;
+        /* faz o conteudo ficar ao centro do grid, nao deixando escapar */
+        align-self: center;
+        margin: 0;
+    }
+    .logo-container img{
+        height: 127%;
+    }
+    .hero-image{
+        grid-area: image;
+        height: 350px;
+    }
+    .buttons-container{
+        grid-area: button;
+        /* Como o botao esta flex então temos que colocar no inicio do flex*/
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .total-connections{
+        grid-area: texting;
+        /* Joga o conteudo ao final do grid */
+        justify-self: end;
+        font-size: 1.2rem;
+    }
+}
