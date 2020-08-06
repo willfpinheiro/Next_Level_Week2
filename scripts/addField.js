@@ -14,7 +14,5 @@ function cloneField() {
     });
 
     // colocar na pagina
-    document.querySelector('#schedule-items').appendChild(newFieldContainer);
-
-
+    document.querySelector('#schedule-items').appendChild(newFieldContainer)
 }
