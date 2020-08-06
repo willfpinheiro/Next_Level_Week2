@@ -101,8 +101,8 @@ color: var(--color-text-in-primary);
         grid-template-areas: 
         "proffy image image"
         "button button texting";
-        column-gap: 87%;
-        row-gap: 86%;
+        column-gap: 87px;
+        row-gap: 86px;
     }
     .logo-container{
         grid-area: proffy;
@@ -112,7 +112,7 @@ color: var(--color-text-in-primary);
         margin: 0;
     }
     .logo-container img{
-        height: 127%;
+        height: 127px;
     }
     .hero-image{
         grid-area: image;
