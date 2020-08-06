@@ -55,7 +55,7 @@
     color: var(--color-primary-dark);
 }
 
-#page-give-classes fieldset+filter {
+#page-give-classes fieldset+fieldset {
     margin-top: 6.4rem;
 }
 
