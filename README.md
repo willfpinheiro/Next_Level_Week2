@@ -14,6 +14,7 @@ Implementação de:
 * npm install express
 * npm install nodemon (Verifica as mmdificações no Node)
 * npm install nunjucks (Template engine para JS, carrega os Arquivos no HTML)
+* npm install sqlite-async (Banco de dados)
 
 ### Comando para iniciar o servidor
 * npm run dev
