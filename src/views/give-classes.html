@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
         rel="stylesheet">
+    <script src="/public/scripts/addField.js" defer></script>
 
 </head>
 
@@ -34,20 +35,20 @@
         </header>
 
         <main>
-            <form action="" id="creat-class">
+            <form action="/save-classes" id="create-class" method="POST">
                 <fieldset>
                     <legend>Seus dados</legend>
                     <div class="input-block">
                         <label for="name">Nome Completo</label>
-                        <input type="name" id="name" required>
+                        <input name="name" type="name" id="name" required>
                     </div>
                     <div class="input-block">
                         <label for="avatar">Link da sua foto <small>(comece com https://)</small></label>
-                        <input type="avatar" id="avatar" type="url" required>
+                        <input name="avatar" type="avatar" id="avatar" type="url" required>
                     </div>
                     <div class="input-block">
                         <label for="whatsapp">Whatsapp <small>(somente números)</small></label>
-                        <input type="whatsapp" id="whatsapp" type="number" required>
+                        <input name="whatsapp" type="whatsapp" id="whatsapp" type="number" required>
                     </div>
                     <div class="textarea-block">
                         <label for="bio">Biografia</label>
@@ -110,7 +111,7 @@
                     Importante! <br>
                     Preencha todos os dados
                 </p>
-                <button type="submit" form="creat-class">Salvar cadastros</button>
+                <button type="submit" form="create-class">Salvar cadastros</button>
             </footer>
         </main>
     </div>
