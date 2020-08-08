@@ -61,6 +61,10 @@
         </header>
 
         <main>
+
+            {% if proffys == %}
+            <p class="no-results">Nenhum professor encontrado com sua pesquisa.</p>
+            {% esle %}
             <!-- nomeclatura utilizada por nunjucks -->
             {%for proffy in proffys%}
             <article class="teacher-item">
@@ -83,7 +87,8 @@
                     </a>
                 </footer>
             </article>
-            {%endfor %}
+            {% endfor %}
+            {% endif %}
 
 
         </main>
